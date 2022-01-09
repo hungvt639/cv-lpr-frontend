@@ -1,0 +1,35 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal-close {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        background-color: #232323e0;
+    }
+    .modal-children {
+        min-width: 200px;
+        min-height: 200px;
+        background-color: #ffffff;
+        z-index: 12;
+    }
+}
+.model-none {
+    display: none;
+    .modal-close-none {
+        display: none;
+    }
+    .model-children-none {
+        display: none;
+    }
+}

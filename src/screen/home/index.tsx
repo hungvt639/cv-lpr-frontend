@@ -5,6 +5,7 @@ import { BASE_URL } from "../../config";
 import Notification from "../../components/notify";
 import Change from "../../img/change.png";
 import { LoadingOutlined } from "@ant-design/icons";
+import errorAPI from "../../utils/errorAPI";
 type ImageState = {
     base64: string | ArrayBuffer | null;
     file: File | null;
@@ -52,7 +53,7 @@ const Index = () => {
                     setLoad(false);
                 })
                 .catch((e: any) => {
-                    console.log(e);
+                    errorAPI(e);
                     setLoad(false);
                 });
         } else {
